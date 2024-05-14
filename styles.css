@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #252020;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vh;
+    border-radius: 30px;
+    background-color: black;
+}
+.navbar{
+    background-color: #151313;
+    color: yellow;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.stopwatch {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 50vw;
+    background-image: url(bg.jpg);
+    background-size: 100% 100%;
+    background-color: #353434;
+    padding: 20px;
+    border-radius: 100%;
+    box-shadow: 0 0 10px rgba(178, 230, 8, 0.737);
+    color: #e38888;
+    position: relative;
+    margin-bottom: 20px;
+    width: 80%; /* Adjust width as needed */
+    max-width: 70%; /* Limit maximum width for larger screens */
+}
+.stopwatch:hover{
+    transform: scale(1.04);
+}
+
+.display {
+    font-size: 2em;
+    margin-top: 50px;
+}
+
+button {
+    font-size: 1em;
+    padding: 0px 0px;
+    margin: 5px 5px;
+    cursor: pointer;
+    background-color: #0b0b0b;
+    border: none;
+    color: #d8e704;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #28321a;
+}
+
+.laps {
+    background-color: #131313;
+    color: yellow;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(178, 230, 8, 0.737);
+    width: 80%; /* Adjust width as needed */
+    max-width: 400px; /* Limit maximum width for larger screens */
+    height: 200px; /* Fixed height for lap times */
+    overflow-y: auto; /* Enable vertical scrollbar */
+    margin-bottom: 20px;
+}
+.laps:hover{
+    transform: scale(1.01);
+}
+.lap-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lap-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.lap-list th,
+.lap-list td {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.lap-list th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.lap-list td {
+    color: #555;
+}
+
+.lap-list tr:last-child td {
+    border-bottom: none;
+}
+
+@media screen and (max-width: 600px) {
+    .stopwatch, .laps {
+        width: 90%; /* Adjust width for smaller screens */
+    }
+}
